@@ -49,6 +49,16 @@
   font-size: 3em;
   color: #397db1;
 }
+.weather-wind {
+  order: 1;
+  font-size: 3em;
+  color: #397db1;
+}
+.weather-clouds {
+  order: 1;
+  font-size: 3em;
+  color: #397db1;
+}
 .weather-image {
   flex: 1 auto;
   text-align: center;

@@ -32,19 +32,24 @@ class TodayWeather extends React.Component {
 
     const celsius = (weather.main.temp - 273.15).toFixed(2); // kelvin to celsius
     const weatherMain = weather.weather[0].main;
-    const iconId = weather.weather[0].id;
+    //const iconId = weather.weather[0].id;
+    const wind = weather.wind.speed;
+    const clouds = weather.clouds.all;
 
     return (
       <div className="weather-today">
-        <h2 className="weather-city">{cityId}</h2>
 
         <div className="weather-today-meta">
+          <h2 className="weather-city">{cityId}</h2>
           <h3 className="weather-main">{weatherMain}</h3>
-          <div className="weather-temp">{celsius}°</div>
         </div>
-        <div className="weather-image">
-          <Icon iconId={iconId} />
-        </div>
+          <br/>
+          <div className="weather-temp">Celsius : {celsius}°</div>
+          <br/>
+          <div className="weather-wind">Wind Speed : {wind}</div>
+          <br/>
+          <div className="weather-clouds">Clouds : {clouds}</div>
+          <br/>
       </div>
     );
   }
